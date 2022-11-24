@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
+// Splash_Screen 
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);
 
@@ -69,6 +69,7 @@ class _SplashScreenState extends State<SplashScreen> {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          // Logo
           Padding(
             padding:
                 EdgeInsets.only(left: 20, right: 20, top: 44.92, bottom: 46.55),
@@ -89,7 +90,7 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
             children: [
-             
+              // Logo DevMenthors
               Image.asset("assets/images/logo.png", width: 159 , height: 48, fit: BoxFit.cover,),
         
             ],),

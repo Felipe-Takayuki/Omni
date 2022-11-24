@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:omnipresent_test/pages/PageCadastro.dart';
 import 'package:omnipresent_test/pages/PageLogin.dart';
+import 'package:omnipresent_test/widgets/botao.dart';
 class OpcoesdeLogin extends StatefulWidget {
   const OpcoesdeLogin({super.key});
 
@@ -41,14 +42,11 @@ class _TeladeOpcoesState extends State<TeladeOpcoes> {
                   ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 51),
-                child: ElevatedButton(onPressed: (){}, child: Text('Cadastrar como Empresa', style: TextStyle(fontSize: 16),), style: ElevatedButton.styleFrom( backgroundColor: Color.fromRGBO(139, 183, 241, 1), fixedSize: Size(242, 51), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),),),
+                child: ButtonCAD(tituloBotao: "Cadastrar como Empresa", rota: null,)
               ),
                    Padding(
                 padding: const EdgeInsets.only(bottom: 27),
-                child: ElevatedButton(onPressed: (){
-                     Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => CadastroTela()));
-                }, child: Text('Cadastrar como Participante', style: TextStyle(fontSize: 16),), style: ElevatedButton.styleFrom( backgroundColor: Color.fromRGBO(107, 171, 255, 1), fixedSize: Size(242, 51), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),),),
+                child: ButtonCAD(tituloBotao: 'Cadastrar como Participante', rota: CadastroTela(),)
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 21),
@@ -56,7 +54,7 @@ class _TeladeOpcoesState extends State<TeladeOpcoes> {
               ),
               Center(child: Padding(
                 padding: const EdgeInsets.only(bottom: 51),
-                child: ElevatedButton(onPressed: (){}, child: Text('Tenho Login', style: TextStyle(fontSize: 16),), style: ElevatedButton.styleFrom( backgroundColor: const Color.fromRGBO(107, 171, 255, 1), fixedSize: Size(242, 51), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),),),
+                child: ButtonCAD(tituloBotao: 'Ja tenho Login', rota: LoginPage(),)
               )),
 
           ],
