@@ -70,12 +70,12 @@ class _LoginPageState extends State<LoginPage> {
               ),
                            const Padding(
                               padding:   EdgeInsets.only(bottom: 42),
-                              child: TextFieldPerosnalizado(tipo: 'CPF', o: false,icone: Icons.email_outlined,),
+                              child: TextFieldPerosnalizado(tipo: 'CPF', o: false,icone: "assets/images/cartao-de-visitas 1.png",),
                             ),
                  
                             const Padding(
                              padding:  EdgeInsets.only(bottom: 42),
-                              child: TextFieldPerosnalizado(tipo: 'Senha', o: true, icone: Icons.lock_outline,),
+                              child: TextFieldPerosnalizado(tipo: 'Senha', o: true, icone:"assets/images/image 4.png",),
                             ),
                         
                            
