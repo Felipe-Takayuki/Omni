@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:omnipresent_test/pages/trueHomePage.dart';
 import 'package:omnipresent_test/widgets/TextField.dart';
 
 class Perfil extends StatefulWidget {
@@ -18,15 +19,16 @@ class _PerfilState extends State<Perfil> {
         child: Center(
           child: Column(children: [
               Padding(
-                          padding: const EdgeInsets.only(top: 28, right: 31, left: 43),
+                          padding:  EdgeInsets.only(top: 28, right: 31, left: 43),
                           child: Image.asset(
                             
-                            'assets/images/logotitle.png',
+                            "assets/images/logotitle.png",
                             fit: BoxFit.cover,
                             width: 286,
                             height: 62,
                           ),
                         ),
+                      
                         Stack(
                           children: [
                             Padding(
@@ -44,16 +46,14 @@ class _PerfilState extends State<Perfil> {
                            Center(
                               child: Padding(
                                 padding: const EdgeInsets.only(top: 108, bottom: 50),
-                                child: TextFieldPerosnalizado(tipo: "Nome", o: false, icone: Icons.person),
+                                child: TextFieldPersonalizado2(tipo: "Nome", o: false, icone: Icons.camera_outlined, textocontrolado: null,),
                               ),
                             ),
                             Center(
                               child: Padding(
                               padding: const EdgeInsets.only(),
                               child: ElevatedButton(
-                                onPressed: () {
-                                   
-                                },
+                                onPressed: () {},
                                 child: Text(
                                   'Confirmar',
                                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
@@ -71,7 +71,8 @@ class _PerfilState extends State<Perfil> {
                               children: [
                                 Spacer(),
                                 TextButton(onPressed: (){
-                                 
+                                    Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => HomeEvents()));
                                 }, child: Text('Pular'))
                               ],
                             )
@@ -81,5 +82,26 @@ class _PerfilState extends State<Perfil> {
       )
       ),
     );
+  }
+}
+class MudarFotoStatic extends StatelessWidget {
+  const MudarFotoStatic({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  Stack(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 93, left: 83),
+                              child: Image.asset('assets/images/do-utilizador (1) 1.png' ,width: 200, height: 200,fit: BoxFit.contain),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 227, left: 225, right: 75),
+                              child: SizedBox(width: 60, height:60,child: ElevatedButton(onPressed: (){}, child: Icon(Icons.camera_alt_outlined), style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50))), )),
+                            ), 
+                           
+
+                          ],
+                        );
   }
 }

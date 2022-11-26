@@ -17,14 +17,14 @@ class TextFieldPerosnalizado extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
         width: 273,
-        child: TextFormField(
+        child: TextField(
           controller: textocontrolado,
           obscureText: o,
           decoration: InputDecoration(
             prefixIcon: SizedBox(
               width: 25,
               height: 25,
-              child: Image.asset(icone),
+              child: Image.asset(icone) ,
             ),
             hintText: tipo,
             hintStyle: TextStyle(
@@ -71,5 +71,35 @@ class _TextFormFieldPersonalizadoState
         ),
       ),
     );
+  }
+}
+class TextFieldPersonalizado2 extends StatelessWidget {
+  const TextFieldPersonalizado2({super.key, required this.tipo, required this.icone, required this.o, required this.textocontrolado});
+  final String tipo;
+  final bool o;
+  final dynamic icone;
+  final dynamic textocontrolado;
+
+  @override
+  Widget build(BuildContext context) {
+    return  SizedBox(
+        width: 273,
+        child: TextField(
+          controller: textocontrolado,
+          obscureText: o,
+          decoration: InputDecoration(
+            prefixIcon: SizedBox(
+              width: 25,
+              height: 25,
+              child: Icon(icone) ,
+            ),
+            hintText: tipo,
+            hintStyle: TextStyle(
+                color: Color.fromRGBO(139, 183, 241, 1),
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+                fontFamily: 'Montserrat'),
+          ),
+        ));
   }
 }

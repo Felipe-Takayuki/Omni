@@ -16,7 +16,19 @@ class _HomeEventsState extends State<HomeEvents> {
       body: SafeArea(
           child: Center(
         child: Column(
-          children: [Text("Seja bem vindo/a \n $nome ")],
+          children: [Padding(
+            padding: const EdgeInsets.only(top:87, left: 33 , right: 237),
+            child: Column(
+              children: [
+                Text("Olá \n $nome"),
+                SizedBox(height: 24),
+                Text("Eventos", style: TextStyle(fontFamily: "Montserrat", fontWeight: FontWeight.w800, fontSize: 24 ),)
+              ],
+            ),
+            
+          ),
+         
+          ],
         ),
       )),
     );

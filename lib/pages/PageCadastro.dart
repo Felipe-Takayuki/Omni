@@ -1,8 +1,11 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:omnipresent_test/pages/PageLogin.dart';
 import 'package:omnipresent_test/pages/perfil.dart';
 import 'package:omnipresent_test/pages/trueHomePage.dart';
 import 'package:omnipresent_test/widgets/TextField.dart';
+
 
 class CadastroTela extends StatefulWidget {
   const CadastroTela({Key? key}) : super(key: key);
@@ -37,21 +40,19 @@ class _CadastroTelaState extends State<CadastroTela> {
                     ),
                   ),
                   Center(
-                      child: Padding(
-                    padding: const EdgeInsets.only(top: 0, bottom: 0),
-                    child: Text(
-                      'CADASTRO',
-                      style: TextStyle(
-                        fontSize: 55,
-                        fontFamily: 'Montserrat',
-                        color: Color.fromRGBO(139, 183, 241, 1),
-                        fontWeight: FontWeight.w400,
-                        fontStyle: FontStyle.normal,
-                      ),
+                      child: Text(
+                    'CADASTRO',
+                    style: TextStyle(
+                      fontSize: 55,
+                      fontFamily: 'Montserrat',
+                      color: Color.fromRGBO(139, 183, 241, 1),
+                      fontWeight: FontWeight.w400,
+                      fontStyle: FontStyle.normal,
                     ),
                   )),
+                  
                   Padding(
-                    padding: const EdgeInsets.only(top: 0, bottom: 65),
+                    padding: const EdgeInsets.only(top: 4.66, bottom: 65),
                     child: Center(
                         child: Text(
                       'Como Participante',
@@ -94,7 +95,7 @@ class _CadastroTelaState extends State<CadastroTela> {
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => HomeEvents()));
+                            builder: (context) => LoginPage()));
                       },
                       child: Text(
                         'Confirmar',
@@ -111,7 +112,9 @@ class _CadastroTelaState extends State<CadastroTela> {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 62),
                     child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                      
+                        },
                         child: Text(
                           'Voltar',
                           style: TextStyle(
@@ -120,7 +123,7 @@ class _CadastroTelaState extends State<CadastroTela> {
                               color: Color.fromRGBO(139, 183, 241, 1),
                               decoration: TextDecoration.underline),
                         )),
-                  )
+                  ),
                 ],
               ),
             ),

@@ -17,8 +17,7 @@ class _BotaoState extends State<Botao> {
           padding: const EdgeInsets.only(bottom: 24),
           child: ElevatedButton(
             onPressed: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => Perfil()));
+             
             },
             child: Text(
               'Confirmar',

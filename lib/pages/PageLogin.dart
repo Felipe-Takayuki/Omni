@@ -82,25 +82,25 @@ class _LoginPageState extends State<LoginPage> {
                             SizedBox(
                               height: 44,
                             ),
-                          Botao()
-                            // Padding(
-                            //   padding: const EdgeInsets.only(bottom: 24),
-                            //   child: ElevatedButton(
-                            //     onPressed: () {
-                            //        Navigator.of(context).push(MaterialPageRoute(
-                            //   builder: (context) => Perfil()));
-                            //     },
-                            //     child: Text(
-                            //       'Confirmar',
-                            //       style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
-                            //     ),
-                            //     style: ElevatedButton.styleFrom(fixedSize: Size(217, 44), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25), )),
-                            //   ),
-                            // ),
-                            // Padding(
-                            //   padding: const EdgeInsets.only(bottom: 62),
-                            //   child: TextButton(onPressed: (){}, child: Text('Voltar' , style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Color.fromRGBO(139, 183, 241, 1), decoration: TextDecoration.underline),)),
-                            // )
+                         
+                            Padding(
+                         padding: const EdgeInsets.only(bottom: 24),
+                      child: ElevatedButton(
+                          onPressed: () {
+                                   Navigator.of(context).push(MaterialPageRoute(
+                       builder: (context) => Perfil()));
+                        },
+                   child: Text(
+                              'Confirmar',
+                                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                                ),
+                                style: ElevatedButton.styleFrom(fixedSize: Size(217, 44), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25), )),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 62),
+                              child: TextButton(onPressed: (){}, child: Text('Voltar' , style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Color.fromRGBO(139, 183, 241, 1), decoration: TextDecoration.underline),)),
+                            )
      
                           
                           ],
