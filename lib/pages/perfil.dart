@@ -46,14 +46,17 @@ class _PerfilState extends State<Perfil> {
                            Center(
                               child: Padding(
                                 padding: const EdgeInsets.only(top: 108, bottom: 50),
-                                child: TextFieldPersonalizado2(tipo: "Nome", o: false, icone: Icons.camera_outlined, textocontrolado: null,),
+                                child: TextFieldPerosnalizado(tipo: "Nome", o: false, icone: "assets/images/pessoa 1.png", textocontrolado: null,),
                               ),
                             ),
                             Center(
                               child: Padding(
                               padding: const EdgeInsets.only(),
                               child: ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                   Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => HomeEvents()));
+                                },
                                 child: Text(
                                   'Confirmar',
                                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
@@ -66,7 +69,14 @@ class _PerfilState extends State<Perfil> {
                             ),
                             TextButton(onPressed: (){
                                Navigator.pop(context);
-                            }, child: Text('Voltar')), 
+                            }, child: Text(
+                          'Voltar',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                              color: Color.fromRGBO(139, 183, 241, 1),
+                              decoration: TextDecoration.underline),
+                        )), 
                             Row(
                               children: [
                                 Spacer(),

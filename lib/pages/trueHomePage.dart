@@ -9,26 +9,22 @@ class HomeEvents extends StatefulWidget {
 }
 
 class _HomeEventsState extends State<HomeEvents> {
-  String nome = "Felipe";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
           child: Center(
         child: Column(
-          children: [Padding(
-            padding: const EdgeInsets.only(top:87, left: 33 , right: 237),
-            child: Column(
-              children: [
-                Text("Olá \n $nome"),
-                SizedBox(height: 24),
-                Text("Eventos", style: TextStyle(fontFamily: "Montserrat", fontWeight: FontWeight.w800, fontSize: 24 ),)
-              ],
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 87, right: 237, left: 33, bottom: 24),
+              child: Text("Ola \n[nome]"),
             ),
-            
-          ),
-         
-          ],
+            Padding(padding: EdgeInsets.only(right: 237, left: 33, bottom: 29), child: Text("Eventos", style: TextStyle(fontFamily:"Montserrat", fontWeight: FontWeight.w800, fontSize: 24)
+            ,),),
+            SizedBox(width: 283, height:34,child: TextField(decoration: InputDecoration(prefixIcon: Image.asset("assets/images/lupa 1.png"),border: OutlineInputBorder(borderRadius: BorderRadius.circular(25)))))
+
+            ],
         ),
       )),
     );
